@@ -1,0 +1,47 @@
+body{
+    background-color: rgb(3, 8, 49);
+}
+
+.message__container{
+    width: auto;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+h1{
+    color: aliceblue;
+}
+
+.form__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    padding: 10px;
+}
+
+.form__container div label{
+    width: 100px;
+    color: rgb(4, 4, 116);
+}
+
+.form__container div.text__input input{
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-radius: 10px;
+    color: orangered;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.form__container #file__container, .file{
+    align-self: center;
+    color: rgb(4, 4, 116);
+}
+
+#submit_btn{
+    width: 100px;
+    color: white;
+}
