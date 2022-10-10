@@ -1,3 +1,20 @@
+<style>
+    #update_btn{
+        margin-bottom: 50px;
+    }
+    .form__container{
+        margin-top: 50px;
+    }
+
+    a{
+        text-decoration: none;
+    }
+
+    #update_btn{
+        
+    }
+</style>
+
 <x-app-layout>
 
     <head>
@@ -53,11 +70,11 @@
             
             <div class="mb-4" id="file__container">
                 <label for="">Change Image</label>
-                <input id="file" type="file" name="file" required>
+                <input id="file" type="file" name="file">
             </div>
 
             <div>
-                <input type="submit" value="Update Product" id="submit_btn" class="btn btn-primary">
+                <input type="submit" value="Update Product" id="update_btn" class="btn btn-primary">
             </div>
         </div>
     </form>

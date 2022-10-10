@@ -62,7 +62,21 @@ class AdminController extends Controller
     public function UpdateProduct(Request $request, $id){
         $data = Product::find($id);
 
+        $image = $request->file;
+
+        if($image){
+            $imageName = time().'.'.$image -> getClientOriginalExtension();
+            $request -> file -> move('productImage', $imageName);
+            $data->image = $imageName;
+        }
+        
         $data->title = $request->title;
+        $data->price = $request->price;
+        $data->description = $request->description;
+        $data->quantity = $request->quantity;
+
+        $data->save();
+
         return redirect()->back()->with('message', 'Product is successfully updated');
     }
 

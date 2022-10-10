@@ -35,6 +35,7 @@
                         <img class="mb-1" src="/productimage/{{$product->image}}" alt="">
                         <div class="title_price">
                             <p>{{$product->title}}</p>
+                            <p>Qty-{{$product->quantity}}</p>
                             <p>GHs{{$product->price}}.00</p>
                         </div>
                     </div>

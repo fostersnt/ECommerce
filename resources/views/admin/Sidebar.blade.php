@@ -41,6 +41,7 @@
 
     td{
         height: 100px; 
+        vertical-align: middle;
       }
 
     img{
