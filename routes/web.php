@@ -36,6 +36,7 @@ Route::post('/uploadproduct', [AdminController::class, 'UploadProduct']);
 Route::get('/deleteproduct/{id}', [AdminController::class, 'DeleteProduct']);
 Route::get('/updateview/{id}', [AdminController::class, 'UpdateView']);
 Route::post('/updateproduct/{id}', [AdminController::class, 'UpdateProduct']);
+Route::get('/export', [AdminController::class, 'ExportProducts']);
 
 /* User Routes */
 Route::get('/', [UserController::class, 'index']);

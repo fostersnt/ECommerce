@@ -6,7 +6,8 @@
     }
 
     .add-new-product{
-        align-self: flex-end
+        display: flex;
+        justify-content: space-between;
     }
 
     a{
@@ -74,7 +75,10 @@
         @endif
         <!--Success message ends here-->
 
-    <div class="add-new-product mb-3"><a href="{{url('product')}}" class="btn btn-primary">Add New Product</a></div>
+    <div class="add-new-product mb-3">
+        <a href="{{url('product')}}" class="btn btn-primary">Add New Product</a>
+        <a href="{{url('export')}}" class="btn btn-outline-secondary">Export All Products</a>
+    </div>
     <table class="table table-striped">
         <th>Title</th>
         <th>Image</th>

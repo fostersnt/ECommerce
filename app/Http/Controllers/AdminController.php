@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\ProductsExport;
 use App\Models\product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
+use Maatwebsite\Excel\Facades\Excel;
 
 //Models
 
@@ -80,4 +82,7 @@ class AdminController extends Controller
         return redirect()->back()->with('message', 'Product is successfully updated');
     }
 
+    public function ExportProducts(){
+       return Excel::download(new ProductsExport, 'Products.xlsx');
+    }
 }
