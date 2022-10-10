@@ -34,6 +34,8 @@ Route::get('/redirect', [AdminController::class, 'redirect']);
 Route::get('/product', [AdminController::class, 'product']);
 Route::post('/uploadproduct', [AdminController::class, 'UploadProduct']);
 Route::get('/deleteproduct/{id}', [AdminController::class, 'DeleteProduct']);
+Route::get('/updateview/{id}', [AdminController::class, 'UpdateView']);
+Route::post('/updateproduct/{id}', [AdminController::class, 'UpdateProduct']);
 
 /* User Routes */
 Route::get('/', [UserController::class, 'index']);

@@ -10,9 +10,7 @@
     <link rel="stylesheet" href="{{ URL::asset('bootstrap_css/bootstrap.min.css') }}" />
     <script src="{{ URL::asset('bootstrap_css/bootstrap.min.css') }}"></script>
     <link rel="stylesheet" href="{{ URL::asset('css/Admin/Product.css') }}" />
-</head>
-
-<body>  
+</head> 
 
 <form action="{{url('uploadproduct')}}" method="post" enctype="multipart/form-data">
     @csrf
@@ -59,7 +57,6 @@
         </div>
     </div>
 </form>
-</body>
-</html>
+
 
 </x-app-layout>

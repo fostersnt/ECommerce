@@ -16,11 +16,11 @@ class AdminController extends Controller
         $usertype = Auth::user() -> usertype;
 
         if($usertype == '1'){
-            $data = Product::paginate(4);
+            $data = Product::paginate(6);
             return view('admin.Home', compact('data'));
         }
         else{
-            $data = Product::all();
+            $data = Product::paginate(6);
             return view('User.UserHome',compact('data'));
         }
     }
@@ -52,4 +52,18 @@ class AdminController extends Controller
         $data->delete();
         return redirect()->back()->with('message', 'Product deleted successfully');
     }
+
+    public function updateview($id){
+        $data = Product::find($id);
+
+        return view('Admin.UpdateView', compact('data'));
+    }
+
+    public function UpdateProduct(Request $request, $id){
+        $data = Product::find($id);
+
+        $data->title = $request->title;
+        return redirect()->back()->with('message', 'Product is successfully updated');
+    }
+
 }

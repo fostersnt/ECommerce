@@ -88,7 +88,7 @@
                 <td>{{$product->description}}</td>
                 <td>{{$product->quantity}}</td>
                 <td>{{$product->price}}</td>
-                <td><a class="btn btn-primary">Edit</a></td>
+                <td><a class="btn btn-primary" href="{{url('updateview', $product->id)}}">Edit</a></td>
                 <td><a class="btn btn-danger" href="{{url('deleteproduct', $product->id)}}">Delete</a></td>
             </tr>
         @endforeach

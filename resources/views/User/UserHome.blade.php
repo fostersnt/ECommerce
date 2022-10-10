@@ -25,7 +25,7 @@
                         @endif
                     @endauth
                 </div>
-            @endif
+        @endif
     </div>
     <div class="container products">
         @foreach ($data as $product)
